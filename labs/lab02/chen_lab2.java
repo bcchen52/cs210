@@ -2,9 +2,13 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.FileInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedInputStream;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
 import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.BufferedReader;
+import java.io.FileWriter;
 
 class chen_lab2
 {
@@ -43,15 +47,18 @@ class chen_lab2
 		{
 			// put your code to read a binary file and output it as a text file
 			byte[] bytes = new byte[1];
-			BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(inputFilename)));
-			PrintWriter output = new PrintWriter(outputFilename);
-			//String inn;
+			BufferedInputStream input = new BufferedInputStream(new FileInputStream(inputFilename));
+			PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilename)));
+
 			while( (input.read(bytes)) > 0)
 			{
 				//bytearray.add(inn);
 				//System.out.println(inn);
-			
+				String str = new String(bytes);
+				output.print(str);
 			}
+			output.flush();
+			output.close();
 			
 		}
 		catch(Exception e)
