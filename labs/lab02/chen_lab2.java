@@ -1,7 +1,10 @@
-
-
-
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.DataOutputStream;
+import java.io.PrintWriter;
 
 class chen_lab2
 {
@@ -17,9 +20,9 @@ class chen_lab2
 		
 		// put some code here to check that the first commandline argument starts with "b" or "t"
 
-		if( !args[0].startsWith("b") && !args[0].startsWith("a"))
+		if( !args[0].startsWith("b") && !args[0].startsWith("t"))
 		{
-			System.out.println("First character of first argument should be b or a");
+			System.out.println("First character of first argument should be b or t");
 			System.exit(0);
 		}
 		
@@ -39,6 +42,16 @@ class chen_lab2
 		try
 		{
 			// put your code to read a binary file and output it as a text file
+			byte[] bytes = new byte[1];
+			BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(inputFilename)));
+			PrintWriter output = new PrintWriter(outputFilename);
+			//String inn;
+			while( (input.read(bytes)) > 0)
+			{
+				//bytearray.add(inn);
+				//System.out.println(inn);
+			
+			}
 			
 		}
 		catch(Exception e)
@@ -56,30 +69,17 @@ class chen_lab2
 			// put your code to read a text file and output it as a binary file
 			java.util.ArrayList<String> inputLines = new java.util.ArrayList<>(0);
 			BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(inputFilename)));
+			DataOutputStream output = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(outputFilename)));
 			
 			String inn;
 			while( (inn = input.readLine()) != null )
 			{
 				inputLines.add(inn);
+				//System.out.println(inn.getBytes());
+				output.write(inn.getBytes());
+				output.write(System.lineSeparator().getBytes());
 			}
-			input.close()
-
-			/*
-			for( i = 0; i < inputLines.length; i++)
-			{
-				inputLines(i)
-			}
-			*/
-
-			//java.io.FileOutputStream input = new java.io.FileOutputStream(outputFilename, true);
-			java.io.BufferedOutputStream output = new java.io.BufferedOutputStream(new java.io.FileOutputStream(outputFilename));
-
-			for( i = 0; i < inputLines.length; i++)
-			{
-				output.write(inputLines[i].getBytes());
-				output.write(System.lineSeperator().getBytes())
-			}
-
+			input.close();
 			output.flush();
 			output.close();
 
