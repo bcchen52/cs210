@@ -1,16 +1,17 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedInputStream;
-import java.io.FileOutputStream;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.PrintWriter;
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
 import java.io.FileWriter;
 
-class chen_lab2
+class chen_p2
 {
 	public static void main(String[] args)
 	{
@@ -43,19 +44,24 @@ class chen_lab2
 	private static void convertBinaryToText(String inputFilename, String outputFilename)
 	{
 		System.out.println("convertBinaryToText");
+		// read binary - DataInputStream, no byte array to read
+		// write binary - ByteBuffer to byte array, BufferedOutputStream to write to byte array
+
 		try
 		{
 			// put your code to read a binary file and output it as a text file
 			byte[] bytes = new byte[1];
-			BufferedInputStream input = new BufferedInputStream(new FileInputStream(inputFilename));
-			PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilename)));
+			//BufferedInputStream input = new BufferedInputStream(new FileInputStream(inputFilename));
+			DataInputStream input = new DataInputStream(new FileInputStream(inputFilename));
+			//PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter(outputFilename)));
+			BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(outputFilename));
 
 			while( (input.read(bytes)) > 0)
 			{
 				//bytearray.add(inn);
 				//System.out.println(inn);
-				String str = new String(bytes);
-				output.print(str);
+				//String str = new String(bytes);
+				//output.print(str);
 			}
 			output.flush();
 			output.close();
@@ -71,6 +77,7 @@ class chen_lab2
 	private static void convertTextToBinary(String inputFilename, String outputFilename)
 	{
 		System.out.println("convertTextToBinary");
+
 		try
 		{
 			// put your code to read a text file and output it as a binary file
