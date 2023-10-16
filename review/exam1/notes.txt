@@ -1,0 +1,28 @@
+interface, Person_I
+public class Person implements Person_I
+    - Inside person, initialize variables
+    - Override the methods from the interface with @Override
+
+public class Student extends Person
+    - By default has the interface implemented
+    - In constructor, call super(args);
+        - Initialize new variables
+    - @Override some method, methodname()
+        - In overriden methods, can use super.methodname(args)
+
+public class School
+    - Empty constructor School() and constructor School(String n)
+        - School(String n) calls this() to use empty constructor then uses n
+
+public class test
+    - Does not run because it is not in a method
+    - Person s2 = new Student(args);
+        - Despite being declared as Person type, it was constructed as its subclass
+        - This does not work in reverse
+        - s2 is the type Student, and returns student methods
+    - Students are Persons, and Students can act as Persons
+        - We can add student types in School's ArrayList<Person>, as they are Persons
+        - Sq is rectangle, rectangle not sq
+    - Student is a subclass of Person, which implements the interface, so we do not need to
+    - Person has getName() and getAge() methods, Student does not
+        - Student is a sublclass, and can call those methods as nothing overrides it 

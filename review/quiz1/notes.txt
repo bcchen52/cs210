@@ -1,0 +1,78 @@
+Constructors
+    - Intialize objects, used when creating an object of that class
+    - Same name as class
+    - Default and with user-defined, with parameters
+        - Can call default with the user-defined constructor using this()
+
+Member Data/Fields
+    - Member meaning in class, applies to both methods and variables
+    - Private cannot be be accessed outside, and are not inherited
+    - Public is visible and accessible outside of the class and is inherited
+
+Getter/Setter methods
+    - If getter methods are public, they can be used to get private fields
+    - Used to set the value of private fields
+        - If private int x, can't change it in a subclass with super.x = k
+        - Use public method from the subclass, super.changeX(k)
+
+toString methods
+    - Prints information about the object
+    - Often overriden as subclasses will have different information and need to be differentiated
+
+this() constructor
+    - Used when there are multiple constructors in a class
+        - For example, the default would be called in a constructor with parameters
+
+this. operator
+    - Get the version of the method in this class if it overrides the method from the parent class
+
+super() constructor call
+    - When in a subclass, call the super class' constructor
+    - Sub classes tend to have extra variables, so call the super constructor to intialize 
+    variables that are shared with super, then initialize the unique ones
+
+super. operator
+    - Get the version of the method in the super class
+    - Can be called in the overriden child version of that method
+    - Ex. 
+    ```
+    @Override
+    public String toString()
+    {
+        return super.toString() + "is also " + x;
+    }
+    ```
+        - This takes the previous toString and adds to it for the subclass
+
+Overriding methods
+    - Methods override parent methods when they have the same, name, type, and parameter types
+    - Child class will always override  
+        - Can add @Override above 
+
+is_a relationship
+    - Super to sub 
+        - Sub is_a super, but not the other way around
+    - Ex.
+    class Student extends Person
+    ```
+    Student s1 = new Student(args);
+    Person s2 = new Student(args);
+    ```
+        - s2 still works and can be treated as a Person, but it is still a student 
+        - s2 will use Student methods when called
+
+Method declarations
+    - return type, name, parameters
+    - Ex.
+    ```
+    public String toString()
+    {
+        return "";
+    }
+    ```
+
+Implementing interfaces
+    - A blueprint for a class   
+        - Has method declarations but no body or code 
+        - When a class implements an interface, it has to have version of all methods in the interface
+    - A class can implement multiple interfaces, but cannot have multiple parent classes

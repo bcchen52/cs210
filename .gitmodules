@@ -4,3 +4,6 @@
 [submodule "assignments/program3"]
 	path = assignments/program3/program3
 	url = git@github.com:Binghamton-CS210-Fall23/pa3-bcchen52.git
+[submodule "labs/lab07"]
+	path = labs/lab07
+	url = git@github.com:Binghamton-CS210-Fall23/lab07-bcchen52.git
