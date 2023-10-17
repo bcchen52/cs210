@@ -7,3 +7,6 @@
 [submodule "labs/lab07"]
 	path = labs/lab07a/lab07
 	url = git@github.com:Binghamton-CS210-Fall23/lab07-bcchen52.git
+[submodule "labs/lab07/lab07-bcchen52"]
+	path = labs/lab07/lab07-bcchen52
+	url = git@github.com:Binghamton-CS210-Fall23/lab07-bcchen52.git
