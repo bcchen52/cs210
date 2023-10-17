@@ -1,12 +1,9 @@
-[submodule "labs/lab06"]
-	path = labs/lab06
-	url = git@github.com:Binghamton-CS210-Fall23/lab-6-updated-bcchen52.git
 [submodule "assignments/program3"]
 	path = assignments/program3/program3
 	url = git@github.com:Binghamton-CS210-Fall23/pa3-bcchen52.git
-[submodule "labs/lab07"]
-	path = labs/lab07a/lab07
-	url = git@github.com:Binghamton-CS210-Fall23/lab07-bcchen52.git
 [submodule "labs/lab07/lab07-bcchen52"]
 	path = labs/lab07/lab07-bcchen52
 	url = git@github.com:Binghamton-CS210-Fall23/lab07-bcchen52.git
+[submodule "labs/lab06/lab-6-updated-bcchen52"]
+	path = labs/lab06/lab-6-updated-bcchen52
+	url = git@github.com:Binghamton-CS210-Fall23/lab-6-updated-bcchen52.git
