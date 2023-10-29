@@ -7,3 +7,6 @@
 [submodule "labs/lab06/lab-6-updated-bcchen52"]
 	path = labs/lab06/lab-6-updated-bcchen52
 	url = git@github.com:Binghamton-CS210-Fall23/lab-6-updated-bcchen52.git
+[submodule "labs/lab08/lab-8-bcchen52"]
+	path = labs/lab08/lab-8-bcchen52
+	url = git@github.com:Binghamton-CS210-Fall23/lab-8-bcchen52.git
