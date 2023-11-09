@@ -13,3 +13,6 @@
 [submodule "assignments/program4/pa4-bcchen52"]
 	path = assignments/program4/pa4-bcchen52
 	url = git@github.com:Binghamton-CS210-Fall23/pa4-bcchen52.git
+[submodule "labs/lab09/lab-9-bcchen52"]
+	path = labs/lab09/lab-9-bcchen52
+	url = git@github.com:Binghamton-CS210-Fall23/lab-9-bcchen52.git
